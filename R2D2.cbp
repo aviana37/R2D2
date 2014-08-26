@@ -35,6 +35,7 @@
 		<Unit filename="arquivo.h" />
 		<Unit filename="cronometro.cpp" />
 		<Unit filename="cronometro.h" />
+		<Unit filename="lista.h" />
 		<Unit filename="lista.tpp" />
 		<Unit filename="main.cpp" />
 		<Extensions>

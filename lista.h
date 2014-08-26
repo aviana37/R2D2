@@ -2,9 +2,9 @@
 #define LISTA_INCLUDED
 
 /*
-**  André Viana Sena de Souza - 26/08/2014
+**  Andre Viana Sena de Souza - 26/08/2014
 **
-**  Definições da classe template de lista encadeada simples.
+**  Definicoes da classe template de lista encadeada simples.
 **/
 
 #include <stddef.h>
