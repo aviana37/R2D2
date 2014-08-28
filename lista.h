@@ -21,7 +21,7 @@ private:
     no* lista;
     no* ultimo;
     no* iterador;
-    unsigned long contador;
+    long int contador;
 
 public:
     Lista();
@@ -32,7 +32,8 @@ public:
     void It_Inicio();
     void It_Proximo();
     T* Iterador();
-    unsigned long Contador();
+    long Contador();
+    T* Vetor();
 };
 
 #include "lista.tpp"

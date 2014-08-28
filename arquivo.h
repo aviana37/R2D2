@@ -23,6 +23,6 @@ enum ArquivosComputadorCentral
     arquivo256k,
 };
 
-Lista<int>* LEIA(ArquivosComputadorCentral);
+Lista<long int>* LEIA(ArquivosComputadorCentral);
 
 #endif // ARQUIVO_H_INCLUDED

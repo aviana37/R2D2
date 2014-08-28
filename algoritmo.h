@@ -8,10 +8,12 @@
 /*  Andre Viana Sena de Souza
 **  Algoritmo de invasão do R2D2
 */
-unsigned long CONTE(Lista<int>* numeros);
+void QuickSort(long int* vetor, long int n);
+unsigned long BuscaBinaria(long int* vetor, int elemento, unsigned long esq, unsigned long dir);
+unsigned long CONTE(Lista<long int>* numeros);
 bool VerificaPrimo(unsigned long numero);
 unsigned long MAIORNUMEROPRIMO(unsigned long limite_superior);
 
-Lista<unsigned long>* Algoritmo();
+Lista<unsigned long>* AlgoritmoR2D2();
 
 #endif // ALGORITMO_H_INCLUDED

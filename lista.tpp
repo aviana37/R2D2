@@ -76,7 +76,22 @@ T* Lista<T>::Iterador()
         return &iterador->item;
 }
 template <typename T>
-unsigned long Lista<T>::Contador()
+long int Lista<T>::Contador()
 {
     return contador;
+}
+template <typename T>
+T* Lista<T>::Vetor()
+{
+    if(lista == NULL)
+        return NULL;
+
+    no* it = lista;
+    T* vetor = new T[contador];
+    for(int c=0; c<contador; c++)
+    {
+        vetor[c] = it->item;
+        it = it->prox;
+    }
+    return vetor;
 }
