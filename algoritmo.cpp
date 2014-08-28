@@ -68,7 +68,7 @@ unsigned long CONTE(Lista<long int>* numeros)
         if(BuscaBinaria(vetor, vetor[c]*-1, 0, n) > 0)
             contador++;
     }
-    return contador*2;
+    return contador;
 }
 
 bool VerificaPrimo(unsigned long numero)
@@ -101,10 +101,20 @@ Lista<unsigned long>* AlgoritmoR2D2()
     ArquivosComputadorCentral atual=arquivo1k;
     Lista<unsigned long>* retorno = new Lista<unsigned long>;
     unsigned long QUANTIDADE;
+    unsigned long maiornumero;
+
     do
     {
+        printf("Executando algoritmo de contagem.\n");
+        ComecarCronometro();
         QUANTIDADE = CONTE(LEIA(atual));
-        retorno->Inserir(MAIORNUMEROPRIMO(QUANTIDADE));
+        printf("%u pares encontrados em %dms.\n", QUANTIDADE, TerminarCronometro());
+
+        printf("Calculando proximo numero primo.\n");
+        maiornumero = MAIORNUMEROPRIMO(QUANTIDADE);
+        printf("Inserindo %u a lista de resultados.\n\n", maiornumero);
+
+        retorno->Inserir(maiornumero);
         atual = (ArquivosComputadorCentral)((int)atual+1);
     }
     while(atual<=arquivo256k);

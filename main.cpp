@@ -1,31 +1,43 @@
-#include "arquivo.h"
-#include "cronometro.h"
 #include "algoritmo.h"
-#include <stdlib.h>
 #include <stdio.h>
-
-void MostrarMenu()
-{
-    printf( "SELECIONE ALGO\n"
-            "1-Executar algoritmo.\n"
-            "2-Sair.\n");
-}
 
 int main()
 {
-    Lista<unsigned long>* primos;
-    int resposta;
-    MostrarMenu();
-    scanf("%d", &resposta);
+    Lista<unsigned long>* primos = NULL;
+    char resposta ='r';
 
-    if(resposta == 1)
+    printf("Deseja executar o algoritmo? (s/n)\n");
+    scanf("%s", &resposta);
+    while(true)
     {
-        primos = AlgoritmoR2D2();
-        for(primos->It_Inicio(); primos->Iterador()!=NULL; primos->It_Proximo())
-            printf("%d ", *primos->Iterador());
-        printf("\n");
+        if(resposta == 's' || resposta == 'S')
+        {
+            printf("\nDando inicio a magia do espaco.\n");
+            if(primos)
+            {
+                delete primos;
+                primos = NULL;
+            }
+            primos = AlgoritmoR2D2();
+
+            printf("Resultados: ");
+            for(primos->It_Inicio(); primos->Iterador()!=NULL; primos->It_Proximo())
+                printf("%d ", *primos->Iterador());
+            printf("\nAdeus.\n");
+            break;
+        }
+        else if(resposta == 'n' || resposta == 'N')
+        {
+            printf("Adeus.\n");
+            break;
+        }
+        else
+        {
+            printf("Deseja executar o algoritmo? (s/n)\n");
+            scanf("%s", &resposta);
+        }
     }
-    else
-        printf("Adeus.\n");
+    if(primos)
+        delete primos;
     return 0;
 }
