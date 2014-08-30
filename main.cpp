@@ -29,9 +29,12 @@ int main()
             }
             primos = AlgoritmoR2D2();
 
-            printf("Resultados: ");
-            for(primos->It_Inicio(); primos->Iterador()!=NULL; primos->It_Proximo())
-                printf("%d ", *primos->Iterador());
+            if(primos)
+            {
+                printf("Resultados: ");
+                for(primos->It_Inicio(); primos->Iterador()!=NULL; primos->It_Proximo())
+                    printf("%d ", *primos->Iterador());
+            }
             printf("\nAdeus.\n");
             break;
         }

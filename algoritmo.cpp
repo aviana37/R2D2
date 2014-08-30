@@ -52,6 +52,8 @@ unsigned long BuscaBinaria(long int* vetor, long int elemento, unsigned long esq
 
 unsigned long CONTE(Lista<long int>* numeros)
 {
+    if(numeros == NULL)
+        return 0;
     long int* vetor = numeros->Vetor();
     long int n = numeros->Contador();
     long int atual, contador=0;
@@ -107,6 +109,11 @@ Lista<unsigned long>* AlgoritmoR2D2()
         printf("Executando algoritmo de contagem.\n");
         ComecarCronometro();
         QUANTIDADE = CONTE(LEIA(atual));
+        if(QUANTIDADE == 0)
+        {
+            printf("Por favor, extraia os arquivos de projeto1_R2D2_arquivosNumerosInteiros.zip no diretorio de execução.\n");
+            return NULL;
+        }
         printf("%u pares encontrados em %dms.\n", QUANTIDADE, TerminarCronometro());
 
         printf("Calculando proximo numero primo.\n");
