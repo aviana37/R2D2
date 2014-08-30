@@ -1,8 +1,6 @@
-/*
-**  André Viana Sena de Souza - 26/08/2014
-**
-**  Implementação do template de lista encadeada simples.
-**/
+/*  Andre Viana Sena de Souza - 26/08/2014
+**  PAA Projeto #1 - R2D2
+*/
 
 template <typename T>
 Lista<T>::Lista()

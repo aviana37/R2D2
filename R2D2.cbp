@@ -31,6 +31,8 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="algoritmo.cpp" />
+		<Unit filename="algoritmo.h" />
 		<Unit filename="arquivo.cpp" />
 		<Unit filename="arquivo.h" />
 		<Unit filename="cronometro.cpp" />
@@ -41,6 +43,16 @@
 		<Extensions>
 			<code_completion />
 			<debugger />
+			<DoxyBlocks>
+				<comment_style block="0" line="0" />
+				<doxyfile_project />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
+			<envvars />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

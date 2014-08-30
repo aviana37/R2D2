@@ -1,5 +1,9 @@
 #include "algoritmo.h"
 
+/*  Andre Viana Sena de Souza - 26/08/2014
+**  PAA Projeto #1 - R2D2
+*/
+
 void QuickSort(long* a, long n)
 {
     if (n < 2)
@@ -30,7 +34,7 @@ void QuickSort(long* a, long n)
     QuickSort(l, a + n - l);
 }
 
-unsigned long BuscaBinaria(long int* vetor, int elemento, unsigned long esq, unsigned long dir)
+unsigned long BuscaBinaria(long int* vetor, long int elemento, unsigned long esq, unsigned long dir)
 {
     if(esq<=dir)
     {
@@ -46,16 +50,11 @@ unsigned long BuscaBinaria(long int* vetor, int elemento, unsigned long esq, uns
         return -1;
 }
 
-/*
-**CONTE conta quantos pares de numeros da lista resultam em zero quando somados.
-**O algoritmo procura por numeros de sinais oposto, pois somente eles, quando somados
-**ao primeiro numero, resultarão em zero.
-*/
 unsigned long CONTE(Lista<long int>* numeros)
 {
     long int* vetor = numeros->Vetor();
     long int n = numeros->Contador();
-    long int atual, zero, contador=0;
+    long int atual, contador=0;
     delete numeros;
 
     QuickSort(vetor, n);

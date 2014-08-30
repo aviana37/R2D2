@@ -1,5 +1,9 @@
 #include "arquivo.h"
 
+/*  Andre Viana Sena de Souza - 26/08/2014
+**  PAA Projeto #1 - R2D2
+*/
+
 Lista<long int>* LEIA(ArquivosComputadorCentral arquivo)
 {
     FILE* entrada;
