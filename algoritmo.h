@@ -36,7 +36,7 @@ Busca binária e QuickSort são algoritmos que funcionam a partir da técnica de
          ao primeiro número, resultarão em zero. Para acelerar o processo de busca, todos os itens
          são transferidos para um vetor. O mesmo é ordenado com o algoritmo QuickSort para depois servir
          como base para o processo de pesquisa binária.\n
-        Este processo de otimização faz o algoritmo executar a tarefa aproximadamente 10000 vezes mais rápido
+        Este processo de otimização faz o algoritmo executar a tarefa aproximadamente 1000 vezes mais rápido
          que uma busca linear iterando diretamente nos itens da lista.
         \param numeros Ponteiro de lista encadeada simples contendo os números a serem avaliados.
          Deletado após uso.
